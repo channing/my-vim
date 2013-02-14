@@ -22,6 +22,9 @@ Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'myusuf3/numbers.vim'
 Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required!
