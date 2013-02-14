@@ -25,7 +25,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'myusuf3/numbers.vim'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'wincent/Command-T'
 
 filetype plugin indent on     " required!
 
