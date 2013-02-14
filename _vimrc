@@ -3,6 +3,7 @@
 set nocompatible               " be iMproved
 
 " Vundle {
+
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
@@ -14,12 +15,15 @@ Bundle 'gmarik/vundle'
 
 Bundle 'mattn/zencoding-vim.git'
 Bundle 'ervandew/supertab.git'
-Bundle 'altercation/vim-colors-solarized.git'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
+Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required!
+
 " }
 
 set noswapfile
@@ -37,6 +41,7 @@ set hidden                          " Allow buffer switching without saving
 
 
 " UI {
+
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
@@ -54,7 +59,7 @@ set incsearch
 " }
 
 
-" Key Mappings
+" Key Mappings {
 let mapleader=","
 
 " Easier moving in tabs and windows
@@ -103,6 +108,7 @@ nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<C
 " Easier horizontal scrolling
 map zl zL
 map zh zH
+" }
 
 
 set autoindent
@@ -113,14 +119,24 @@ set shiftwidth=4
 set wrap
 set linebreak
 
-set clipboard=unnamed
+"set clipboard=unnamed
 
 
 " Plugins {
 
-" Powerline
+" Powerline {
 let g:Powerline_symbols = 'fancy'
 set t_Co=256
 set laststatus=2
+"}
 
-" }
+" Fugitive {
+    nnoremap <silent> <leader>gs :Gstatus<CR>
+    nnoremap <silent> <leader>gd :Gdiff<CR>
+    nnoremap <silent> <leader>gc :Gcommit<CR>
+    nnoremap <silent> <leader>gb :Gblame<CR>
+    nnoremap <silent> <leader>gl :Glog<CR>
+    nnoremap <silent> <leader>gp :Git push<CR>
+"}
+
+"}
