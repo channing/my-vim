@@ -14,7 +14,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'mattn/zencoding-vim.git'
-Bundle 'ervandew/supertab.git'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
