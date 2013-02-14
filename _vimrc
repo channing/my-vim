@@ -20,6 +20,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdtree'
 Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required!
@@ -128,7 +129,7 @@ set linebreak
 let g:Powerline_symbols = 'fancy'
 set t_Co=256
 set laststatus=2
-"}
+" }
 
 " Fugitive {
     nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -137,6 +138,21 @@ set laststatus=2
     nnoremap <silent> <leader>gb :Gblame<CR>
     nnoremap <silent> <leader>gl :Glog<CR>
     nnoremap <silent> <leader>gp :Git push<CR>
-"}
+" }
 
-"}
+" NerdTree {
+    map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+    map <leader>e :NERDTreeFind<CR>
+    nmap <leader>nt :NERDTreeFind<CR>
+
+    let NERDTreeShowBookmarks=1
+    let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+    let NERDTreeChDirMode=0
+    let NERDTreeQuitOnOpen=1
+    let NERDTreeMouseMode=2
+    let NERDTreeShowHidden=1
+    let NERDTreeKeepTreeInNewTab=1
+    let g:nerdtree_tabs_open_on_gui_startup=0
+" }
+
+" }
