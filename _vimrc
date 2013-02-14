@@ -1,4 +1,8 @@
+" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
+
 set nocompatible               " be iMproved
+
+" Vundle {
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
@@ -12,9 +16,11 @@ Bundle 'mattn/zencoding-vim.git'
 Bundle 'ervandew/supertab.git'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'tpope/vim-rails.git'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required!
+" }
 
 set noswapfile
 
@@ -26,11 +32,11 @@ scriptencoding utf-8
 
 set virtualedit=onemore             " Allow for cursor beyond last character
 set history=1000                    " Store a ton of history (default is 20)
-set spell                           " Spell checking on
+"set spell                           " Spell checking on
 set hidden                          " Allow buffer switching without saving
 
 
-" UI
+" UI {
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
@@ -38,13 +44,14 @@ let g:solarized_termtrans=1
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 
-set showmode                    " Display the current mode
+"set showmode                    " Display the current mode
 set number
 
 set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+" }
 
 
 " Key Mappings
@@ -108,3 +115,12 @@ set linebreak
 
 set clipboard=unnamed
 
+
+" Plugins {
+
+" Powerline
+let g:Powerline_symbols = 'fancy'
+set t_Co=256
+set laststatus=2
+
+" }
