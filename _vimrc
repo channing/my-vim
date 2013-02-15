@@ -175,20 +175,16 @@ set laststatus=2
 " }
 
 " neocomplcache {
-    let g:acp_enableAtStartup = 0
+    let g:endwise_no_mappings = 1
+
     let g:neocomplcache_enable_at_startup = 1
+    "let g:neocomplcache_disable_auto_complete = 1
     let g:neocomplcache_enable_camel_case_completion = 1
     let g:neocomplcache_enable_smart_case = 1
     let g:neocomplcache_enable_underbar_completion = 1
     let g:neocomplcache_enable_auto_delimiter = 1
     let g:neocomplcache_max_list = 15
     let g:neocomplcache_force_overwrite_completefunc = 1
-
-    " SuperTab like snippets behavior.
-    imap <silent><expr><TAB> neosnippet#expandable() ?
-                \ "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ?
-                \ "\<C-e>" : "\<TAB>")
-    smap <TAB> <Right><Plug>(neosnippet_jump_or_expand)
 
     " Define dictionary.
     let g:neocomplcache_dictionary_filetype_lists = {
@@ -204,8 +200,6 @@ set laststatus=2
     let g:neocomplcache_keyword_patterns._ = '\h\w*'
 
     " Plugin key-mappings.
-    imap <C-k> <Plug>(neosnippet_expand_or_jump)
-    smap <C-k> <Plug>(neosnippet_expand_or_jump)
     inoremap <expr><C-g> neocomplcache#undo_completion()
     inoremap <expr><C-l> neocomplcache#complete_common_string()
     inoremap <expr><CR> neocomplcache#complete_common_string()
