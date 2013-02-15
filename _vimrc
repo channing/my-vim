@@ -13,12 +13,15 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+Bundle 'altercation/vim-colors-solarized.git'
+Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'chriskempson/base16-vim'
+
 Bundle 'mattn/zencoding-vim.git'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-surround'
-Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
@@ -56,6 +59,9 @@ set hidden                          " Allow buffer switching without saving
 " UI {
 
 set background=dark
+
+"colorscheme base16-default
+"colorscheme Tomorrow-Night
 let g:solarized_termcolors=256
 colorscheme solarized
 let g:solarized_termtrans=1
