@@ -33,7 +33,11 @@ filetype plugin indent on     " required!
 
 set noswapfile
 
-syntax enable
+" Nuke the 1 second delay for ESC
+set notimeout
+set ttimeout
+set ttimeoutlen=10
+
 syntax on                   " Syntax highlighting
 set mouse=a                 " Automatically enable mouse usage
 set mousehide               " Hide the mouse cursor while typing
