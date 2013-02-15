@@ -21,11 +21,14 @@ Bundle 'tpope/vim-surround'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'wincent/Command-T'
+Bundle 'matchit.zip'
+Bundle 'bufexplorer.zip'
 
 filetype plugin indent on     " required!
 
