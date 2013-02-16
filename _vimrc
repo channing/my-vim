@@ -39,7 +39,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'SirVer/ultisnips'
 Bundle 'ervandew/supertab'
 
-filetype plugin on     " required!
+filetype plugin indent on     " required!
 
 " }
 
@@ -140,7 +140,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-set autoindent
+"set autoindent
 set smartindent
 
 set wrap
@@ -255,6 +255,7 @@ set laststatus=2
 
 "let g:UltiSnipsSnippetDirectories = ["UltiSnips", "~/.vim/bundle/snipmate-snippets/snippets"]
 
+autocmd BufNewFile,BufRead *.scss UltiSnipsAddFiletypes scss.css
 " }
 
 " }
