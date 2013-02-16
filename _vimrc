@@ -35,7 +35,7 @@ Bundle 'matchit.zip'
 Bundle 'bufexplorer.zip'
 Bundle 'Shougo/neocomplcache'
 
-filetype plugin indent on     " required!
+filetype plugin on     " required!
 
 " }
 
@@ -83,10 +83,10 @@ set incsearch
 let mapleader=","
 
 " Easier moving in tabs and windows
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-L> <C-W>l<C-W>_
-map <C-H> <C-W>h<C-W>_
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
 
 " Toggle search highlighting
 nmap <silent> <leader>/ :set invhlsearch<CR>
@@ -131,10 +131,13 @@ map zh zH
 " }
 
 
-set autoindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set expandtab
+
+set autoindent
+set smartindent
 
 set wrap
 set linebreak
