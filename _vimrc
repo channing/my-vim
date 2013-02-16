@@ -13,6 +13,7 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+Bundle 'godlygeek/csapprox'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'chriskempson/base16-vim'
@@ -33,7 +34,10 @@ Bundle 'myusuf3/numbers.vim'
 Bundle 'wincent/Command-T'
 Bundle 'matchit.zip'
 Bundle 'bufexplorer.zip'
+
 Bundle 'Shougo/neocomplcache'
+Bundle 'SirVer/ultisnips'
+Bundle 'ervandew/supertab'
 
 filetype plugin on     " required!
 
@@ -245,6 +249,12 @@ set laststatus=2
     if has('conceal')
         set conceallevel=2 concealcursor=i
     endif
+" }
+
+" UltiSnip {
+
+"let g:UltiSnipsSnippetDirectories = ["UltiSnips", "~/.vim/bundle/snipmate-snippets/snippets"]
+
 " }
 
 " }
