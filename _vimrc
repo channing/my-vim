@@ -86,6 +86,13 @@ set incsearch
 " Key Mappings {
 let mapleader=","
 
+nnoremap <leader>v "+p
+
+" Ctrl+S save file
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+
 " Easier moving in tabs and windows
 map <C-J> <C-W>j
 map <C-K> <C-W>k
