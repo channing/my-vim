@@ -260,7 +260,10 @@ set laststatus=2
 
 " UltiSnip {
 
-"let g:UltiSnipsSnippetDirectories = ["UltiSnips", "~/.vim/bundle/snipmate-snippets/snippets"]
+set rtp+=~/.my-vim/
+let g:UltiSnipsDontReverseSearchPath="1"
+let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets"]
+let g:UltiSnipsSnippetsDir = "~/.my-vim/snippets"
 
 autocmd BufNewFile,BufRead *.scss UltiSnipsAddFiletypes scss.css
 " }
