@@ -48,7 +48,7 @@ set noswapfile
 " Nuke the 1 second delay for ESC
 set notimeout
 set ttimeout
-set ttimeoutlen=10
+set ttimeoutlen=100
 
 syntax on                   " Syntax highlighting
 set mouse=a                 " Automatically enable mouse usage
@@ -264,6 +264,9 @@ set rtp+=~/.my-vim/
 let g:UltiSnipsDontReverseSearchPath="1"
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets"]
 let g:UltiSnipsSnippetsDir = "~/.my-vim/snippets"
+let g:UltiSnipsEditSplit = "horizontal"
+
+nnoremap <silent> <leader>se :UltiSnipsEdit<CR>
 
 autocmd BufNewFile,BufRead *.scss UltiSnipsAddFiletypes scss.css
 " }
