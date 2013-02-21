@@ -86,7 +86,10 @@ set incsearch
 " Key Mappings {
 let mapleader=","
 
-nnoremap <leader>v "+p
+" Clipboard
+vnoremap <leader>y "+y
+noremap <leader>p "+p
+noremap <leader>P :put<CR>
 
 " Ctrl+S save file
 noremap <silent> <C-S>          :update<CR>
