@@ -29,11 +29,12 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'techlivezheng/vim-plugin-minibufexpl'
+Bundle 'channingd/vim-plugin-minibufexpl'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'wincent/Command-T'
 Bundle 'matchit.zip'
-Bundle 'bufexplorer.zip'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'SirVer/ultisnips'
@@ -42,6 +43,8 @@ Bundle 'ervandew/supertab'
 filetype plugin indent on     " required!
 
 " }
+
+set rtp+=~/.my-vim/runtime/
 
 set noswapfile
 
@@ -163,6 +166,7 @@ set linebreak
 
 " Powerline {
 let g:Powerline_symbols = 'fancy'
+let g:Powerline_colorscheme = 'default_fix'
 set t_Co=256
 set laststatus=2
 " }
@@ -272,6 +276,17 @@ let g:UltiSnipsEditSplit = "horizontal"
 nnoremap <silent> <leader>se :UltiSnipsEdit<CR>
 
 autocmd BufNewFile,BufRead *.scss UltiSnipsAddFiletypes scss.css
+" }
+
+" MiniBufExpl Colors {
+
+"hi MBEVisibleActive guifg=#A6DB29 guibg=fg
+"hi MBEVisibleChangedActive guifg=#F1266F guibg=fg
+"hi MBEVisibleChanged guifg=#F1266F guibg=fg
+"hi MBEVisibleNormal guifg=#5DC2D6 guibg=fg
+"hi MBEChanged guifg=#CD5907 guibg=fg
+"hi MBENormal guifg=#808080 guibg=fg
+
 " }
 
 " }
