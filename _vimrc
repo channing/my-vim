@@ -35,6 +35,7 @@ Bundle 'channingd/vim-plugin-minibufexpl'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'wincent/Command-T'
 Bundle 'matchit.zip'
+Bundle 'danro/rename.vim'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'SirVer/ultisnips'
@@ -169,6 +170,11 @@ let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'default_fix'
 set t_Co=256
 set laststatus=2
+" }
+
+" EasyMotion {
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionShade  Comment
 " }
 
 " Fugitive {
