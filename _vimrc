@@ -36,6 +36,7 @@ Bundle 'myusuf3/numbers.vim'
 Bundle 'wincent/Command-T'
 Bundle 'matchit.zip'
 Bundle 'danro/rename.vim'
+Bundle 'channingd/gyp.vim'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'SirVer/ultisnips'
@@ -45,7 +46,8 @@ filetype plugin indent on     " required!
 
 " }
 
-set rtp+=~/.my-vim/runtime/
+" { General
+set rtp+=~/.my-vim/runtime
 
 set noswapfile
 
@@ -68,6 +70,20 @@ set hidden                          " Allow buffer switching without saving
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+"set autoindent
+set smartindent
+
+set wrap
+set linebreak
+
+"set clipboard=unnamed
+
+" }
 
 " UI {
 
@@ -163,27 +179,11 @@ endif
 
 "  }
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-
-"set autoindent
-set smartindent
-
-set wrap
-set linebreak
-
-"set clipboard=unnamed
-
-
 " Plugins {
 
 " Powerline {
 let g:Powerline_symbols = 'fancy'
-if !has('win32') && !has('win64')
-    let g:Powerline_colorscheme = 'default_fix'
-endif
+let g:Powerline_colorscheme = 'default_fix'
 set t_Co=256
 set laststatus=2
 " }
