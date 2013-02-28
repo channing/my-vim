@@ -57,12 +57,16 @@ set ttimeoutlen=100
 syntax on                   " Syntax highlighting
 set mouse=a                 " Automatically enable mouse usage
 set mousehide               " Hide the mouse cursor while typing
+set encoding=utf-8
 scriptencoding utf-8
 
 set virtualedit=onemore             " Allow for cursor beyond last character
 set history=1000                    " Store a ton of history (default is 20)
 "set spell                           " Spell checking on
 set hidden                          " Allow buffer switching without saving
+
+" backspace and cursor keys wrap to previous/next line
+set backspace=indent,eol,start whichwrap+=<,>,[,]
 
 
 " UI {
@@ -85,7 +89,6 @@ set smartcase
 set hlsearch
 set incsearch
 " }
-
 
 " Key Mappings {
 let mapleader=","
@@ -148,6 +151,17 @@ map zl zL
 map zh zH
 " }
 
+" Windows {
+
+if has('win32') || has('win64')
+
+" disable toolbars etc.
+set go=
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+
+endif
+
+"  }
 
 set tabstop=4
 set softtabstop=4
@@ -167,7 +181,9 @@ set linebreak
 
 " Powerline {
 let g:Powerline_symbols = 'fancy'
-let g:Powerline_colorscheme = 'default_fix'
+if !has('win32') && !has('win64')
+    let g:Powerline_colorscheme = 'default_fix'
+endif
 set t_Co=256
 set laststatus=2
 " }
