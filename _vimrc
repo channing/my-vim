@@ -175,6 +175,10 @@ if has('win32') || has('win64')
 set go=
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
 
+" clipboard
+exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+cmap <C-V> <C-R>+
+
 endif
 
 "  }
