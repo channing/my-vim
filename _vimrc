@@ -75,13 +75,15 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+autocmd FileType ruby set tabstop=2|set shiftwidth=2
+
 "set autoindent
 set smartindent
 
 set wrap
 set linebreak
 
-"set clipboard=unnamed
+set clipboard=unnamed
 
 " }
 
