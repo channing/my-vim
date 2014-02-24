@@ -31,11 +31,12 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 "Bundle 'fholgado/minibufexpl.vim'
 "Bundle 'techlivezheng/vim-plugin-minibufexpl'
-Bundle 'channingd/vim-plugin-minibufexpl'
+Bundle 'channing/vim-plugin-minibufexpl'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'wincent/Command-T'
 Bundle 'matchit.zip'
 Bundle 'danro/rename.vim'
+Bundle 'channing/gyp.vim'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'SirVer/ultisnips'
@@ -45,7 +46,8 @@ filetype plugin indent on     " required!
 
 " }
 
-set rtp+=~/.my-vim/runtime/
+" { General
+set rtp+=~/.my-vim/runtime
 
 set noswapfile
 
@@ -57,6 +59,7 @@ set ttimeoutlen=100
 syntax on                   " Syntax highlighting
 set mouse=a                 " Automatically enable mouse usage
 set mousehide               " Hide the mouse cursor while typing
+set encoding=utf-8
 scriptencoding utf-8
 
 set virtualedit=onemore             " Allow for cursor beyond last character
@@ -64,6 +67,26 @@ set history=1000                    " Store a ton of history (default is 20)
 "set spell                           " Spell checking on
 set hidden                          " Allow buffer switching without saving
 
+" backspace and cursor keys wrap to previous/next line
+set backspace=indent,eol,start whichwrap+=<,>,[,]
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+autocmd FileType ruby set tabstop=2|set shiftwidth=2
+au FileType ruby set softtabstop=2 tabstop=2 shiftwidth=2
+
+"set autoindent
+set smartindent
+
+set wrap
+set linebreak
+
+set clipboard=unnamed
+
+" }
 
 " UI {
 
@@ -85,7 +108,6 @@ set smartcase
 set hlsearch
 set incsearch
 " }
-
 
 " Key Mappings {
 let mapleader=","
@@ -148,22 +170,23 @@ map zl zL
 map zh zH
 " }
 
+" Windows {
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
+if has('win32') || has('win64')
 
-"set autoindent
-set smartindent
+" disable toolbars etc.
+set go=
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
 
-set wrap
-set linebreak
+" clipboard
+exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+cmap <C-V> <C-R>+
 
-au FileType ruby set softtabstop=2 tabstop=2 shiftwidth=2
 
 "set clipboard=unnamed
+endif
 
+"  }
 
 " Plugins {
 
