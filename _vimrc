@@ -13,12 +13,13 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+" Skin
 Bundle 'godlygeek/csapprox'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'chriskempson/base16-vim'
 
-"Bundle 'mattn/zencoding-vim.git'
+Bundle 'mattn/emmet-vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
@@ -37,6 +38,8 @@ Bundle 'wincent/Command-T'
 Bundle 'matchit.zip'
 Bundle 'danro/rename.vim'
 Bundle 'channing/gyp.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'docunext/closetag.vim'
 
 Bundle 'SirVer/ultisnips'
 Bundle 'Valloric/YouCompleteMe'
