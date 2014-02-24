@@ -160,6 +160,8 @@ set smartindent
 set wrap
 set linebreak
 
+au FileType ruby set softtabstop=2 tabstop=2 shiftwidth=2
+
 "set clipboard=unnamed
 
 
