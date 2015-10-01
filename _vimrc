@@ -86,7 +86,11 @@ set smartindent
 set wrap
 set linebreak
 
-set clipboard=unnamed
+" HTML
+au FileType html set softtabstop=2 tabstop=2 shiftwidth=2
+let g:html_indent_script1 = "inc" 
+let g:html_indent_style1 = "inc" 
+let g:html_indent_inctags = "html,body,head,tbody" 
 
 " }
 
@@ -115,14 +119,27 @@ set incsearch
 let mapleader=","
 
 " Clipboard
-vnoremap <leader>y "+y
-noremap <leader>p "+p
-noremap <leader>P :put +<CR>
+" CTRL-X Cut
+vnoremap <C-X> "+x
+
+" CTRL-C Copy
+vnoremap <C-C> "+y
+
+" CTRL-V Paste
+map <C-V>		"+gP
+cmap <C-V>		<C-R>+
+
+
+
 
 " Ctrl+S save file
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
+
+" Quotes text objects
+xnoremap q i"
+onoremap q i"
 
 " Easier moving in tabs and windows
 map <C-J> <C-W>j
